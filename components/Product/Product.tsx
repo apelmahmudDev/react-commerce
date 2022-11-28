@@ -25,20 +25,46 @@ const Product: FC = () => {
 			</h1>
 
 			{/* select category */}
-			<div className="flex justify-end">
-				<select className="w-[194px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-					<option selected>Choose a country</option>
-					<option value="US">United States</option>
-					<option value="CA">Canada</option>
-					<option value="FR">France</option>
-					<option value="DE">Germany</option>
+			<div className="flex justify-end mb-10">
+				<select className="w-[194px] shadow-lg bg-white border-2 border-primary text-primary text-base rounded-2xl focus:ring-blue-500 focus:border-primary active:border-primary font-bold text-center block py-2.5 px-3">
+					<option
+						className="font-bold text-[#000] text-sm  bg-[#D9D9D9] py-2]"
+						selected
+					>
+						Casual
+					</option>
+					<option
+						className="font-bold text-[#000] text-sm bg-[#EFECEC] py-2"
+						value="US"
+					>
+						Formal
+					</option>
+					<option
+						className="font-bold text-[#000] text-sm bg-[#D9D9D9] py-2]"
+						value="CA"
+					>
+						Sports
+					</option>
+					<option
+						className="font-bold text-[#000] text-sm bg-[#EFECEC] py-2"
+						value="FR"
+					>
+						Costumes
+					</option>
+					<option
+						className="font-bold text-[#000] text-sm bg-[#D9D9D9] py-2]"
+						value="DE"
+					>
+						Adventure
+					</option>
+					<option
+						className="font-bold text-[#000] text-sm bg-[#EFECEC] py-2"
+						value="DE"
+					>
+						Under Wear
+					</option>
 				</select>
 			</div>
-
-			{/* <Link href="/">
-				<Card />
-			</Link> */}
-
 			<Swiper
 				className="product-swiper"
 				slidesPerView={3}
@@ -47,12 +73,7 @@ const Product: FC = () => {
 				navigation={true}
 				pagination={pagination}
 				lazy={true}
-				modules={[
-					Pagination,
-					Navigation,
-					// Autoplay,
-					Lazy,
-				]}
+				modules={[Pagination, Navigation, Lazy]}
 				breakpoints={{
 					0: { slidesPerView: 1 },
 					350: { slidesPerView: 2 },
@@ -60,10 +81,6 @@ const Product: FC = () => {
 					900: { slidesPerView: 3 },
 					1200: { slidesPerView: 4 },
 				}}
-				// autoplay={{
-				// 	delay: 5000,
-				// 	disableOnInteraction: false,
-				// }}
 			>
 				<SwiperSlide>
 					<Link href="/">
