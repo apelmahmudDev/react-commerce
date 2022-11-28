@@ -34,3 +34,72 @@ body {
 .input-shadow {
 	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.product-swiper {
+	padding-bottom: 100px !important;
+}
+
+/* arrow between */
+.product-swiper .swiper-button-prev,
+.product-swiper .swiper-button-next {
+	position: absolute;
+	top: 95%;
+	width: calc(100% - 44px * 3);
+	/* z-index: -5; */
+}
+
+/* arrow color */
+.product-swiper .swiper-button-prev::after,
+.product-swiper .swiper-button-next::after {
+	background: #fff;
+	padding: 3.9px 9px;
+	color: #ff9f43;
+	font-size: 16px;
+	font-weight: 700;
+	border-radius: 50%;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product-swiper .swiper-pagination {
+	position: relative;
+	text-align: center;
+	top: 76px;
+	z-index: 5;
+}
+
+.product-swiper .swiper-pagination::after {
+	content: "";
+	position: absolute;
+	background: #f1c40f;
+	width: 200px;
+	height: 40px;
+	z-index: -5;
+	top: -5.5px;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 30px;
+}
+
+.product-swiper .swiper-pagination .swiper-pagination-bullet {
+	position: relative;
+	background: #fff;
+	color: #ff9f43;
+	font-weight: bold;
+	opacity: 1;
+	border-radius: 50%;
+	padding: 2.8px 9px;
+	margin: 0 5px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product-swiper .swiper-pagination .swiper-pagination-bullet-active {
+	background: #fff;
+	border: none;
+	font-weight: bold;
+	opacity: 1;
+	border-radius: 50%;
+	padding: 2.8px 9px;
+	margin: 0 5px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}

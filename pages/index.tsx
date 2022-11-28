@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
+import Product from "../components/Product";
 // import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 
 			<main>
 				<Hero />
-				{/* <Product/> */}
+				<Product />
 			</main>
 
 			<footer></footer>

@@ -12,8 +12,8 @@ module.exports = {
 		extend: {},
 		colors: {
 			primary: "#F1C40F",
-			"primary-light": "#ffdf0f",
 			secondary: "#FF9F43",
+			"primary-light": "#ffdf0f",
 		},
 	},
 	plugins: [],

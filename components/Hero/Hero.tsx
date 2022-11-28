@@ -1,4 +1,3 @@
-import { Alert } from "flowbite-react";
 import { FC } from "react";
 import Banner from "../Banner";
 import Navbar from "../Navbar";
