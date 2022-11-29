@@ -4,7 +4,7 @@ import Navbar from "../Navbar";
 
 const Hero: FC = () => {
 	return (
-		<div className="h-screen w-screen app-bg">
+		<div className="h-auto  app-bg">
 			<Navbar />
 			<Banner />
 		</div>

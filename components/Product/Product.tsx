@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Link from "next/link";
 import Card from "../Card";
 
@@ -9,6 +9,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Lazy, Navigation } from "swiper";
 
 const Product: FC = () => {
+	const [category, setCategory] = useState("Casual");
+
 	// for swiper slieder
 	const pagination = {
 		clickable: true,
@@ -19,47 +21,51 @@ const Product: FC = () => {
 	};
 
 	return (
-		<div className="my-20">
-			<h1 className="my-32 text-center font-bold text-black text-5xl uppercase">
+		<div className="my-20 container">
+			<h1 className="my-20 text-center font-bold text-black text-2xl md:text-3xl lg:text-5xl uppercase">
 				Our latest product
 			</h1>
 
 			{/* select category */}
 			<div className="flex justify-end mb-10">
-				<select className="w-[194px] shadow-lg bg-white border-2 border-primary text-primary text-base rounded-2xl focus:ring-blue-500 focus:border-primary active:border-primary font-bold text-center block py-2.5 px-3">
+				<select
+					value={category}
+					onChange={(e) => setCategory(e.target.value)}
+					className="w-[194px] shadow-lg bg-white border-2 border-primary text-primary text-base rounded-2xl focus:ring-blue-500 focus:border-primary active:border-primary font-bold text-center block py-2.5 px-3"
+				>
 					<option
 						className="font-bold text-[#000] text-sm  bg-[#D9D9D9] py-2]"
-						selected
+						value="Casual"
 					>
 						Casual
 					</option>
 					<option
 						className="font-bold text-[#000] text-sm bg-[#EFECEC] py-2"
-						value="US"
+						value="Formal"
 					>
 						Formal
 					</option>
 					<option
 						className="font-bold text-[#000] text-sm bg-[#D9D9D9] py-2]"
-						value="CA"
+						value="Sports"
 					>
 						Sports
 					</option>
 					<option
 						className="font-bold text-[#000] text-sm bg-[#EFECEC] py-2"
-						value="FR"
+						value="Costumes"
 					>
 						Costumes
 					</option>
 					<option
 						className="font-bold text-[#000] text-sm bg-[#D9D9D9] py-2]"
-						value="DE"
+						value="Adventure"
 					>
 						Adventure
 					</option>
 					<option
 						className="font-bold text-[#000] text-sm bg-[#EFECEC] py-2"
-						value="DE"
+						value="Under Wear"
 					>
 						Under Wear
 					</option>
@@ -76,10 +82,8 @@ const Product: FC = () => {
 				modules={[Pagination, Navigation, Lazy]}
 				breakpoints={{
 					0: { slidesPerView: 1 },
-					350: { slidesPerView: 2 },
-					// 600: { slidesPerView: 2 },
-					900: { slidesPerView: 3 },
-					1200: { slidesPerView: 4 },
+					640: { slidesPerView: 2 },
+					1024: { slidesPerView: 3 },
 				}}
 			>
 				<SwiperSlide>
